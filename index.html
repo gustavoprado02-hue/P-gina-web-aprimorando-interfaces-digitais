@@ -1,104 +1,531 @@
-<article class="post">
-    <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <div class="conteudo">
-        <h2>🐐 Pelé, Messi ou Cristiano?</h2>
-        <p class="autor">Por Gustavo</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Fut</title>
 
-        <p>
-            Na minha opinião, Pelé continua sendo o maior nome da história
-            do futebol pela importância que teve para o esporte. Messi possui
-            um talento técnico impressionante, enquanto Cristiano Ronaldo é
-            um dos maiores exemplos de dedicação e evolução no futebol.
-        </p>
+    <style>
 
-        <div class="reacoes">
-            <button class="like">❤️ <span>0</span></button>
-            <button class="dislike">👎 <span>0</span></button>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f6;
+            font-family: Arial, sans-serif;
+            color: #555;
+        }
+
+        header {
+            background-color: #fc9c01;
+            color: white;
+            max-width: 850px;
+            margin: 30px auto 20px;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 6px solid #eacc07;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        main {
+            background-color: white;
+            max-width: 850px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .inicio {
+            display: flex;
+            gap: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .icone {
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .conteudo {
+            flex: 1;
+        }
+
+        section {
+            padding: 35px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            color: #e68a00;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        ol {
+            padding-left: 40px;
+            margin-top: 20px;
+        }
+
+        li {
+            padding: 8px 0;
+            line-height: 1.6;
+        }
+
+        .reacoes {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 16px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .like {
+            background-color: #c97b00;
+            color: white;
+            border: 2px solid #eacc07;
+        }
+
+        .dislike {
+            background-color: #e9ecef;
+            color: #555;
+        }
+
+        .contador {
+            background-color: #f1f1f1;
+            color: #555;
+        }
+
+        .ativo {
+            background-color: #e68a00;
+            color: white;
+        }
+
+        footer {
+            background-color: #fc9c01;
+            color: white;
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 20px;
+            text-align: center;
+            border-top: 5px solid #eacc07;
+        }
+
+        @media (max-width: 600px) {
+
+            header, main, footer {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            main {
+                padding: 20px;
+            }
+
+            .inicio {
+                gap: 15px;
+            }
+
+            .icone {
+                width: 100px;
+                height: 70px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚽ World Fut</h1>
+        <p>Rankings, opiniões e grandes nomes da história do futebol.</p>
+    </header>
+
+
+    <main>
+
+        <div class="inicio">
+
+            <img class="icone"
+                src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png"
+                alt="Bola de futebol">
+
+            <div class="conteudo">
+
+                <h2>Meu Ranking Pessoal</h2>
+
+                <p>
+                    Neste site compartilho meus rankings e opiniões sobre
+                    alguns dos maiores jogadores e atletas do futebol.
+                </p>
+
+                <div class="reacoes">
+                    <button class="like">👍 Curtir</button>
+                    <button class="dislike">👎 Discordar</button>
+                    <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                </div>
+
+            </div>
+
         </div>
-    </div>
-</article>
 
-<article class="post">
-    <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
 
-    <div class="conteudo">
-        <h2>⚡ O futebol atual é melhor?</h2>
-        <p class="autor">Por Gustavo</p>
+        <section>
 
-        <p>
-            O futebol atual é mais rápido, físico e organizado taticamente.
-            Porém, muitos torcedores acreditam que o futebol de antigamente
-            tinha mais liberdade para os jogadores mostrarem criatividade.
-            Para mim, cada época tem seus grandes destaques.
-        </p>
+            <h2>🧤 Goleiros</h2>
 
-        <div class="reacoes">
-            <button class="like">❤️ <span>0</span></button>
-            <button class="dislike">👎 <span>0</span></button>
-        </div>
-    </div>
-</article>
+            <p>
+                A posição de goleiro é uma das mais importantes do futebol.
+                Enquanto os jogadores de linha buscam criar jogadas e marcar
+                gols, o goleiro tem a responsabilidade de proteger sua equipe
+                e impedir os ataques adversários.
+            </p>
 
-<article class="post">
-    <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
+            <p>
+                Abaixo está uma lista com 10 dos goleiros mais destacados e
+                consistentes do futebol internacional atual:
+            </p>
 
-    <div class="conteudo">
-        <h2>🇧🇷 A Seleção Brasileira ainda pode voltar ao topo?</h2>
-        <p class="autor">Por Gustavo</p>
+            <ol>
 
-        <p>
-            O Brasil continua revelando grandes jogadores e possui uma enorme
-            tradição no futebol. Na minha opinião, o principal desafio é formar
-            uma equipe equilibrada, com organização e jogadores que consigam
-            transformar talento individual em um grande trabalho coletivo.
-        </p>
+                <li><strong>Thibaut Courtois</strong> (Real Madrid / Bélgica) – Soberano no jogo aéreo e em defesas decisivas.</li>
 
-        <div class="reacoes">
-            <button class="like">❤️ <span>0</span></button>
-            <button class="dislike">👎 <span>0</span></button>
-        </div>
-    </div>
-</article>
+                <li><strong>Gianluigi Donnarumma</strong> (Paris Saint-Germain / Itália) – Grande alcance físico e reflexos de alto nível.</li>
 
-<article class="post">
-    <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
+                <li><strong>Alisson Becker</strong> (Liverpool / Brasil) – Excepcional no um contra um e muito seguro.</li>
 
-    <div class="conteudo">
-        <h2>🎯 O jogador mais completo precisa fazer muitos gols?</h2>
-        <p class="autor">Por Gustavo</p>
+                <li><strong>David Raya</strong> (Arsenal / Espanha) – Destaque pelo excelente jogo com os pés.</li>
 
-        <p>
-            Eu não acho que apenas gols definem um grande jogador. Um goleiro
-            pode salvar uma partida, um zagueiro pode liderar toda uma defesa
-            e um meio-campista pode controlar o ritmo do jogo. O futebol é um
-            esporte coletivo, e cada posição possui sua importância.
-        </p>
+                <li><strong>Mike Maignan</strong> (AC Milan / França) – Um dos goleiros mais ágeis da atualidade.</li>
 
-        <div class="reacoes">
-            <button class="like">❤️ <span>0</span></button>
-            <button class="dislike">👎 <span>0</span></button>
-        </div>
-    </div>
-</article>
+                <li><strong>Dibu Martínez</strong> (Aston Villa / Argentina) – Decisivo em grandes momentos.</li>
 
-<article class="post">
-    <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
+                <li><strong>Diogo Costa</strong> (FC Porto / Portugal) – Excelente leitura de jogo e passe preciso.</li>
 
-    <div class="conteudo">
-        <h2>🏆 Qual competição é a mais difícil?</h2>
-        <p class="autor">Por Gustavo</p>
+                <li><strong>Ederson</strong> (Manchester City / Brasil) – Referência na construção de jogadas.</li>
 
-        <p>
-            Na minha opinião, não existe uma resposta definitiva. A Copa do
-            Mundo possui uma pressão enorme por representar um país, enquanto
-            grandes competições de clubes exigem regularidade contra equipes
-            muito fortes. Cada torneio apresenta desafios diferentes.
-        </p>
+                <li><strong>Jan Oblak</strong> (Atlético de Madrid / Eslovênia) – Grande regularidade e posicionamento.</li>
 
-        <div class="reacoes">
-            <button class="like">❤️ <span>0</span></button>
-            <button class="dislike">👎 <span>0</span></button>
-        </div>
-    </div>
-</article>
+                <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha) – Seguro e importante para sua equipe.</li>
+
+            </ol>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>👑 Jogadores de Linha</h2>
+
+            <p>
+                No futebol, os jogadores de linha dividem-se entre defensores,
+                meio-campistas e atacantes. Cada posição possui sua importância
+                para o funcionamento de uma equipe.
+            </p>
+
+            <p>
+                Este é o meu ranking pessoal dos maiores jogadores da história:
+            </p>
+
+            <ol>
+
+                <li><strong>Pelé</strong> - Brasil</li>
+                <li><strong>Lionel Messi</strong> - Argentina</li>
+                <li><strong>Diego Maradona</strong> - Argentina</li>
+                <li><strong>Cristiano Ronaldo</strong> - Portugal</li>
+                <li>Johan Cruyff - Holanda</li>
+                <li>Zinedine Zidane - França</li>
+                <li>Ronaldo Nazário - Brasil</li>
+                <li>Franz Beckenbauer - Alemanha</li>
+                <li>Alfredo Di Stéfano - Argentina/Espanha</li>
+                <li>Michel Platini - França</li>
+                <li>Garrincha - Brasil</li>
+                <li>Ronaldinho Gaúcho - Brasil</li>
+                <li>Ferenc Puskás - Hungria</li>
+                <li>Eusébio - Portugal</li>
+                <li>Marco van Basten - Holanda</li>
+                <li>Gerd Müller - Alemanha</li>
+                <li>Romário - Brasil</li>
+                <li>Andrés Iniesta - Espanha</li>
+                <li>Luka Modrić - Croácia</li>
+                <li>Neymar Jr. - Brasil</li>
+
+            </ol>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>🔥 Neymar é subestimado?</h2>
+
+            <p>
+                Na minha opinião, Neymar é um dos jogadores brasileiros mais
+                talentosos da sua geração. Sua criatividade, habilidade e
+                capacidade de decidir partidas fazem dele um jogador especial.
+            </p>
+
+            <p>
+                Muitas pessoas avaliam sua carreira apenas pelos títulos, mas
+                acredito que seu talento e sua importância para o futebol
+                brasileiro merecem ser reconhecidos.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>🐐 Pelé, Messi ou Cristiano?</h2>
+
+            <p>
+                Essa é uma das maiores discussões do futebol. Pelé marcou a
+                história e ajudou a transformar o esporte em algo ainda maior.
+                Messi impressiona pelo talento e pela forma como cria jogadas.
+            </p>
+
+            <p>
+                Cristiano Ronaldo, por outro lado, é um grande exemplo de
+                dedicação, evolução e capacidade de marcar gols. Para mim,
+                comparar jogadores de épocas diferentes sempre será difícil.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>🇧🇷 A Seleção Brasileira pode voltar ao topo?</h2>
+
+            <p>
+                O Brasil continua sendo um dos países que mais revela jogadores
+                talentosos. Existem grandes atletas brasileiros atuando nos
+                principais campeonatos do mundo.
+            </p>
+
+            <p>
+                Na minha opinião, o principal desafio é transformar esse talento
+                individual em uma equipe organizada e preparada para competir
+                contra as melhores seleções.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>⚽ Futebol antigo ou futebol moderno?</h2>
+
+            <p>
+                O futebol moderno é mais rápido, físico e organizado
+                taticamente. Atualmente, os jogadores precisam cumprir várias
+                funções durante uma mesma partida.
+            </p>
+
+            <p>
+                Porém, o futebol de antigamente também possuía jogadores
+                extremamente criativos e marcantes. Para mim, cada época teve
+                suas próprias características e seus grandes craques.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>🏆 Copa do Mundo ou Champions League?</h2>
+
+            <p>
+                A Copa do Mundo possui uma pressão enorme porque representa uma
+                nação inteira. Para muitos jogadores, conquistar esse título é
+                o maior sonho possível no futebol.
+            </p>
+
+            <p>
+                Já a Champions League exige regularidade durante toda a
+                competição contra alguns dos melhores clubes do mundo. Na minha
+                opinião, as duas competições são especiais e possuem desafios
+                diferentes.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>⭐ Minha opinião sobre o futebol</h2>
+
+            <p>
+                O futebol é interessante porque não existe uma única maneira
+                correta de enxergar o jogo. Cada torcedor possui seus jogadores
+                favoritos, seus clubes e suas próprias opiniões.
+            </p>
+
+            <p>
+                Por isso, este site foi criado para compartilhar rankings e
+                opiniões e também para que outras pessoas possam concordar ou
+                discordar de cada publicação.
+            </p>
+
+            <div class="reacoes">
+                <button class="like">👍 Curtir</button>
+                <button class="dislike">👎 Discordar</button>
+                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>⚽ World Fut - Rankings e opiniões sobre futebol.</p>
+    </footer>
+
+
+    <script>
+
+        const reacoes = document.querySelectorAll(".reacoes");
+
+        reacoes.forEach(function(reacao) {
+
+            const like = reacao.querySelector(".like");
+            const dislike = reacao.querySelector(".dislike");
+
+            const numeros = reacao.querySelectorAll(".contador span");
+
+            const numeroLike = numeros[0];
+            const numeroDislike = numeros[1];
+
+            let escolha = "";
+
+            like.addEventListener("click", function() {
+
+                if (escolha === "") {
+
+                    numeroLike.textContent++;
+                    escolha = "like";
+
+                    like.classList.add("ativo");
+
+                } else if (escolha === "dislike") {
+
+                    numeroDislike.textContent--;
+                    numeroLike.textContent++;
+
+                    escolha = "like";
+
+                    dislike.classList.remove("ativo");
+                    like.classList.add("ativo");
+
+                }
+
+            });
+
+
+            dislike.addEventListener("click", function() {
+
+                if (escolha === "") {
+
+                    numeroDislike.textContent++;
+                    escolha = "dislike";
+
+                    dislike.classList.add("ativo");
+
+                } else if (escolha === "like") {
+
+                    numeroLike.textContent--;
+                    numeroDislike.textContent++;
+
+                    escolha = "dislike";
+
+                    like.classList.remove("ativo");
+                    dislike.classList.add("ativo");
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
