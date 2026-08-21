@@ -15,7 +15,7 @@
         body {
             background-color: #F4F4F6;
             font-family: 'Arial', sans-serif;
-            padding-bottom: 40px;
+            padding-bottom: 0;
         }
 
         /* Cabeçalho principal */
@@ -40,7 +40,7 @@
         main {
             background-color: #FFFFFF;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 40px auto;
             padding: 32px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -61,6 +61,7 @@
             display: flex;
             flex-direction: column;
             gap: 32px;
+            width: 100%;
         }
 
         /* Seções do site */
@@ -94,6 +95,28 @@
             margin-bottom: 16px;
         }
 
+        /* [NOVO] Caixa de Destaque para o Rei do Futebol */
+        .destaque-lider {
+            background-color: #FFFDF0;
+            border: 2px solid #EACC07;
+            border-left: 6px solid #FC9C01;
+            padding: 16px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .destaque-lider h4 {
+            color: #FC9C01;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .destaque-lider p {
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #222222;
+        }
+
         /* Listas ordenadas limpas e alinhadas */
         ol {
             color: #333333;
@@ -101,16 +124,25 @@
             margin-bottom: 16px;
         }
 
+        /* [NOVO] Efeito hover interativo na lista ensinado em interfaces */
         li {
-            margin-bottom: 10px;
+            padding: 6px 8px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
             line-height: 1.5;
+        }
+
+        li:hover {
+            background-color: #FFF5E6;
+            transform: translateX(5px);
         }
 
         li strong {
             color: #111111;
         }
 
-        /* Estilização dos Botões de Like (Pedido da Aula de Interfaces) */
+        /* Estilização dos Botões de Like */
         .btn-like {
             background-color: #FC9C01;
             color: #FFFFFF;
@@ -126,9 +158,23 @@
             transition: background-color 0.2s;
         }
 
-        /* Efeito de passar o mouse ensinado pelos professores */
         .btn-like:hover {
             background-color: #D88400;
+        }
+
+        /* [NOVO] Rodapé Semântico padrão Alura */
+        footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+
+        footer span {
+            color: #FC9C01;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -140,13 +186,12 @@
     </header>
     
     <main>
-        <img src="Gemini_Generated_Image_f7wr4mf7wr4mf7wr-removebg-preview.png" alt="Ícone moderno de uma bola de futebol na cor laranja com fundo transparente.">
+        <img src="https://citypng.com" alt="Ícone moderno de uma bola de futebol na cor laranja com fundo transparente.">
         
         <div class="conteudo-principal">
             <section>
                 <h2>Meu Ranking Pessoal</h2>
                 <p>Aqui vai estar o meu Ranking! Além disso compartilharei minha opinião sobre o futebol e até outros esportes.</p>
-                <!-- Botão de curtir na introdução -->
                 <button class="btn-like">👍 Curtir Ranking</button>
             </section>
 
@@ -155,6 +200,7 @@
                 <p>A posição de goleiro é, sem dúvida, a mais única e solitária do futebol. Enquanto os dez jogadores de linha buscam a criação de jogadas e o gol adversário, o goleiro é a última linha de defesa e a primeira de ataque.</p>
                 
                 <h3>Abaixo está uma lista com 10 dos goleiros mais destacados e consistentes do futebol internacional atual:</h3>
+                
                 <ol>
                     <li><strong>Thibaut Courtois</strong> (Real Madrid / Bélgica) – Soberano no jogo aéreo e em defesas milagrosas.</li>
                     <li><strong>Gianluigi Donnarumma</strong> (Paris Saint-Germain / Itália) – Impressionante alcance físico e reflexos de elite.</li>
@@ -167,7 +213,6 @@
                     <li><strong>Jan Oblak</strong> (Atlético de Madrid / Eslovênia) – Regularidade impressionante e posicionamento impecável.</li>
                     <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha) – Seguro entre os paus e na saída de bola.</li>
                 </ol>
-                <!-- Botão de curtir na seção de goleiros -->
                 <button class="btn-like">👍 Curtir Goleiros</button>
             </section>
 
@@ -176,8 +221,14 @@
                 <p>No futebol, os jogadores de linha dividem-se em defensores, meio-campistas e atacantes. Cada grupo tem funções próprias para proteger o gol, dominar o meio do campo e fazer gols na equipe rival.</p>
                 
                 <h3>Abaixo os maiores craques de linha da história:</h3>
-                <ol>
-                    <li>Pelé - Brasil</li>
+
+                <!-- NOVO: Caixa de destaque visual para o Top 1 -->
+                <div class="destaque-lider">
+                    <h4>👑 O Rei do Futebol</h4>
+                    <p>1. Pelé - Brasil</p>
+                </div>
+
+                <ol start="2">
                     <li>Lionel Messi - Argentina</li>
                     <li>Diego Maradona - Argentina</li>
                     <li>Cristiano Ronaldo - Portugal</li>
@@ -203,11 +254,15 @@
                     <li>Paolo Maldini - Itália</li>
                     <li>Luciano Neves - São Paulo</li>
                 </ol>
-                <!-- Botão de curtir na seção de craques -->
                 <button class="btn-like">👍 Curtir Craques</button>
             </section>
         </div>
     </main>
+
+    <!-- NOVO: Rodapé da página -->
+    <footer>
+        <p>Desenvolvido por você nas aulas de HTML e CSS da <span>Alura</span>.</p>
+    </footer>
 
 </body>
 </html>
