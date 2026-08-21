@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking the Best</title>
     <style>
-        /* Reset básico e tipografia profissional */
+        /* Reset básico e tipografia */
         * {
             margin: 0;
             padding: 0;
@@ -15,10 +15,10 @@
         body {
             background-color: #F4F4F6;
             font-family: 'Arial', sans-serif;
-            padding-bottom: 60px; /* Garante que o final da página respire */
+            padding-bottom: 60px;
         }
 
-        /* Cabeçalho principal com sombra suave */
+        /* Cabeçalho principal */
         header {
             background-color: #FC9C01;
             color: #FFFFFF;
@@ -64,7 +64,7 @@
             width: 100%;
         }
 
-        /* Seções separadas de forma limpa */
+        /* Seções separadas */
         section {
             border-bottom: 1px solid #EAEAEA;
             padding-bottom: 24px;
@@ -125,7 +125,7 @@
             margin-bottom: 20px;
         }
 
-        /* Efeito interativo avançado na lista (Aprimorando Interfaces) */
+        /* Efeito interativo na lista */
         li {
             padding: 6px 12px;
             margin-bottom: 6px;
@@ -145,12 +145,16 @@
             color: #111111;
         }
 
-        /* Botões de Like com feedback de clique */
-        .btn-like {
-            background-color: #FC9C01;
-            color: #FFFFFF;
+        /* Container Flexbox para alinhar os botões lado a lado */
+        .reacoes-container {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Base de estilo comum para os botões */
+        .btn-interacao {
             border: none;
-            padding: 12px 24px;
+            padding: 10px 20px;
             font-size: 0.9rem;
             font-weight: bold;
             border-radius: 6px;
@@ -158,17 +162,33 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 2px 4px rgba(252, 156, 1, 0.2);
             transition: background-color 0.2s, transform 0.1s;
         }
 
-        /* Efeito de passar o mouse */
+        /* Estilo específico do botão de Like */
+        .btn-like {
+            background-color: #FC9C01;
+            color: #FFFFFF;
+            box-shadow: 0 2px 4px rgba(252, 156, 1, 0.2);
+        }
+
         .btn-like:hover {
             background-color: #D88400;
         }
 
-        /* Efeito de clique do botão */
-        .btn-like:active {
+        /* Estilo específico do botão de Dislike (Tom neutro/suave para contraste) */
+        .btn-dislike {
+            background-color: #E9ECEF;
+            color: #495057;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-dislike:hover {
+            background-color: #CED4DA;
+        }
+
+        /* Efeito físico de clique aplicado a ambos os botões */
+        .btn-interacao:active {
             transform: scale(0.96);
         }
     </style>
@@ -187,14 +207,19 @@
             <section>
                 <h2>Meu Ranking Pessoal</h2>
                 <p>Aqui vai estar o meu Ranking! Além disso compartilharei minha opinião sobre o futebol e até outros esportes.</p>
-                <button class="btn-like">👍 Curtir Ranking</button>
+                
+                <!-- Grupo de botões Like/Dislike -->
+                <div class="reacoes-container">
+                    <button class="btn-interacao btn-like">👍 Curtir</button>
+                    <button class="btn-interacao btn-dislike">👎 Discordar</button>
+                </div>
             </section>
 
             <section>
                 <h2>Goleiros</h2>
                 <p>A posição de goleiro é, sem dúvida, a mais única e solitária do futebol. Enquanto os dez jogadores de linha buscam a criação de jogadas e o gol adversário, o goleiro é a última linha de defesa e a primeira de ataque.</p>
                 
-                <h3>Abaixo está uma lista com 10 dos goleiros mais destacados e consistentes do futebol internacional atual:</h3>
+                <h3>Abaixo está uma lista com 10 dos goleiros mais destacados e consistententes do futebol internacional atual:</h3>
                 
                 <ol>
                     <li><strong>Thibaut Courtois</strong> (Real Madrid / Bélgica) – Soberano no jogo aéreo e em defesas milagrosas.</li>
@@ -208,7 +233,12 @@
                     <li><strong>Jan Oblak</strong> (Atlético de Madrid / Eslovênia) – Regularidade impressionante e posicionamento impecável.</li>
                     <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha) – Seguro entre os paus e na saída de bola.</li>
                 </ol>
-                <button class="btn-like">👍 Curtir Goleiros</button>
+
+                <!-- Grupo de botões Like/Dislike -->
+                <div class="reacoes-container">
+                    <button class="btn-interacao btn-like">👍 Curtir Goleiros</button>
+                    <button class="btn-interacao btn-dislike">👎 Discordar</button>
+                </div>
             </section>
 
             <section>
@@ -248,10 +278,4 @@
                     <li>Paolo Maldini - Itália</li>
                     <li>Luciano Neves - São Paulo</li>
                 </ol>
-                <button class="btn-like">👍 Curtir Craques</button>
-            </section>
-        </div>
-    </main>
 
-</body>
-</html>
