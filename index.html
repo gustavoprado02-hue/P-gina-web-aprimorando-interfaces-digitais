@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking the Best</title>
     <style>
-        /* Reset básico e tipografia */
+        /* Reset básico e tipografia profissional */
         * {
             margin: 0;
             padding: 0;
@@ -15,10 +15,10 @@
         body {
             background-color: #F4F4F6;
             font-family: 'Arial', sans-serif;
-            padding-bottom: 0;
+            padding-bottom: 60px; /* Garante que o final da página respire */
         }
 
-        /* Cabeçalho principal */
+        /* Cabeçalho principal com sombra suave */
         header {
             background-color: #FC9C01;
             color: #FFFFFF;
@@ -40,7 +40,7 @@
         main {
             background-color: #FFFFFF;
             max-width: 800px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto;
             padding: 32px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -64,7 +64,7 @@
             width: 100%;
         }
 
-        /* Seções do site */
+        /* Seções separadas de forma limpa */
         section {
             border-bottom: 1px solid #EAEAEA;
             padding-bottom: 24px;
@@ -95,7 +95,7 @@
             margin-bottom: 16px;
         }
 
-        /* [NOVO] Caixa de Destaque para o Rei do Futebol */
+        /* Caixa de Destaque Premium para o Top 1 */
         .destaque-lider {
             background-color: #FFFDF0;
             border: 2px solid #EACC07;
@@ -103,6 +103,7 @@
             padding: 16px;
             border-radius: 6px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(234, 204, 7, 0.1);
         }
 
         .destaque-lider h4 {
@@ -117,64 +118,58 @@
             color: #222222;
         }
 
-        /* Listas ordenadas limpas e alinhadas */
+        /* Listas ordenadas e limpas */
         ol {
             color: #333333;
             padding-left: 24px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
 
-        /* [NOVO] Efeito hover interativo na lista ensinado em interfaces */
+        /* Efeito interativo avançado na lista (Aprimorando Interfaces) */
         li {
-            padding: 6px 8px;
-            margin-bottom: 4px;
+            padding: 6px 12px;
+            margin-bottom: 6px;
             border-radius: 4px;
-            transition: all 0.2s ease;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease-in-out;
             line-height: 1.5;
         }
 
         li:hover {
             background-color: #FFF5E6;
-            transform: translateX(5px);
+            border-left: 3px solid #FC9C01;
+            transform: translateX(6px);
         }
 
         li strong {
             color: #111111;
         }
 
-        /* Estilização dos Botões de Like */
+        /* Botões de Like com feedback de clique */
         .btn-like {
             background-color: #FC9C01;
             color: #FFFFFF;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             font-size: 0.9rem;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: background-color 0.2s;
+            box-shadow: 0 2px 4px rgba(252, 156, 1, 0.2);
+            transition: background-color 0.2s, transform 0.1s;
         }
 
+        /* Efeito de passar o mouse */
         .btn-like:hover {
             background-color: #D88400;
         }
 
-        /* [NOVO] Rodapé Semântico padrão Alura */
-        footer {
-            background-color: #333333;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            margin-top: 40px;
-        }
-
-        footer span {
-            color: #FC9C01;
-            font-weight: bold;
+        /* Efeito de clique do botão */
+        .btn-like:active {
+            transform: scale(0.96);
         }
     </style>
 </head>
@@ -222,7 +217,6 @@
                 
                 <h3>Abaixo os maiores craques de linha da história:</h3>
 
-                <!-- NOVO: Caixa de destaque visual para o Top 1 -->
                 <div class="destaque-lider">
                     <h4>👑 O Rei do Futebol</h4>
                     <p>1. Pelé - Brasil</p>
@@ -258,11 +252,6 @@
             </section>
         </div>
     </main>
-
-    <!-- NOVO: Rodapé da página -->
-    <footer>
-        <p>Desenvolvido por você nas aulas de HTML e CSS da <span>Alura</span>.</p>
-    </footer>
 
 </body>
 </html>
