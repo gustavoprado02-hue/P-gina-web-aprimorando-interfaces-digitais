@@ -19,7 +19,7 @@
             color: #555;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            align-items: center;
         }
 
         header {
@@ -44,10 +44,11 @@
             background-color: white;
             width: 100%;
             max-width: 850px;
-            margin: auto;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+            /* Flexbox no container principal para espaçar as seções e artigos */
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -69,13 +70,18 @@
 
         .conteudo {
             flex: 1;
-        }
-
-        article {
-            padding-bottom: 30px;
-            border-bottom: 1px solid #ddd;
             display: flex;
             flex-direction: column;
+            gap: 12px;
+        }
+
+        /* artigo configurado com flexbox e espaçamento via gap */
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
         }
 
         article:last-of-type {
@@ -86,32 +92,31 @@
         h2 {
             color: #e68a00;
             font-size: 28px;
-            margin-bottom: 15px;
         }
 
         p {
             font-size: 16px;
             line-height: 1.8;
-            margin-bottom: 12px;
         }
 
         ol {
             padding-left: 40px;
-            margin-top: 10px;
-            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
         li {
-            padding: 6px 0;
             line-height: 1.6;
         }
 
+        /* Container de botões com flex-wrap para quebra de linha em telas menores */
         .reacoes {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 5px;
         }
 
         button {
@@ -160,7 +165,7 @@
             header, main, footer {
                 margin-left: 15px;
                 margin-right: 15px;
-                width: auto;
+                width: calc(100% - 30px);
             }
 
             main {
