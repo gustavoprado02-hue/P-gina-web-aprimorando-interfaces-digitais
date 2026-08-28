@@ -26,7 +26,7 @@
             background-color: #fc9c01;
             color: white;
             width: 100%;
-            max-width: 850px;
+            max-width: 1100px;
             margin: 30px auto 20px;
             padding: 30px;
             text-align: center;
@@ -40,26 +40,28 @@
             margin-bottom: 8px;
         }
 
+        /* CONFIGURAÇÃO DO MAIN IGUAL AO VÍDEO */
         main {
-            background-color: white;
             width: 100%;
-            max-width: 850px;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px;
 
-            /* Flexbox no container principal para espaçar as seções e artigos */
+            /* Flexbox responsável por colocar os cards lado a lado */
             display: flex;
-            flex-direction: column;
-            gap: 30px;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
         .inicio {
+            width: 100%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             display: flex;
             align-items: center;
             gap: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #ddd;
         }
 
         .icone {
@@ -75,57 +77,59 @@
             gap: 12px;
         }
 
-        /* artigo configurado com flexbox e espaçamento via gap */
+        /* ESTILO DOS CARDS (ARTICLE) IGUAL À AULA */
         article {
+            background-color: white;
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #ddd;
-            flex: 1 1 30%
-        }
+            justify-content: space-between;
+            gap: 16px;
 
-        article:last-of-type {
-            border-bottom: none;
-            padding-bottom: 0;
+            border: 1px solid #183C63;
+            border-radius: 8px;
+            padding: 16px;
+
+            /* Faz o card ocupar cerca de 1/3 da linha com flexbox */
+            flex: 1 1 calc(33.333% - 16px);
+            min-width: 280px; /* Garante um tamanho mínimo antes de quebrar a linha */
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
         }
 
         h2 {
             color: #e68a00;
-            font-size: 28px;
+            font-size: 22px;
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        ol {
-            padding-left: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        li {
+            font-size: 15px;
             line-height: 1.6;
         }
 
-        /* Container de botões com flex-wrap para quebra de linha em telas menores */
+        ol {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 14px;
+        }
+
+        /* ÁREA DE BOTÕES NO FINAL DE CADA CARD */
         .reacoes {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 10px;
-            margin-top: 5px;
+            gap: 8px;
+            margin-top: auto; /* Empurra os botões para a base do card */
+            padding-top: 10px;
+            border-top: 1px solid #eee;
         }
 
         button {
             border: none;
-            padding: 12px 16px;
-            font-size: 15px;
+            padding: 8px 12px;
+            font-size: 13px;
             font-weight: bold;
-            border-radius: 7px;
+            border-radius: 6px;
             cursor: pointer;
         }
 
@@ -155,37 +159,28 @@
             background-color: #fc9c01;
             color: white;
             width: 100%;
-            max-width: 850px;
+            max-width: 1100px;
             margin: 25px auto;
             padding: 20px;
             text-align: center;
             border-top: 5px solid #eacc07;
         }
 
-        @media (max-width: 600px) {
-            header, main, footer {
-                margin-left: 15px;
-                margin-right: 15px;
-                width: calc(100% - 30px);
+        /* RESPONSIVIDADE (Telas menores) */
+        @media (max-width: 900px) {
+            article {
+                flex: 1 1 calc(50% - 16px); /* 2 cards por linha no tablet */
             }
+        }
 
-            main {
-                padding: 20px;
+        @media (max-width: 600px) {
+            article {
+                flex: 1 1 100%; /* 1 card por linha no celular */
             }
 
             .inicio {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 15px;
-            }
-
-            .icone {
-                width: 100px;
-                height: 70px;
-            }
-
-            h2 {
-                font-size: 22px;
             }
         }
     </style>
@@ -221,24 +216,19 @@
             <p>
                 A posição de goleiro é uma das mais importantes do futebol.
                 Enquanto os jogadores de linha buscam criar jogadas e marcar
-                gols, o goleiro tem a responsabilidade de proteger sua equipe
-                e impedir os ataques adversários.
-            </p>
-            <p>
-                Abaixo está uma lista com 10 dos goleiros mais destacados e
-                consistentes do futebol internacional atual:
+                gols, o goleiro tem a responsabilidade de proteger sua equipe.
             </p>
             <ol>
-                <li><strong>Thibaut Courtois</strong> (Real Madrid / Bélgica) – Soberano no jogo aéreo e em defesas decisivas.</li>
-                <li><strong>Gianluigi Donnarumma</strong> (Paris Saint-Germain / Itália) – Grande alcance físico e reflexos de alto nível.</li>
-                <li><strong>Alisson Becker</strong> (Liverpool / Brasil) – Excepcional no um contra um e muito seguro.</li>
-                <li><strong>David Raya</strong> (Arsenal / Espanha) – Destaque pelo excelente jogo com os pés.</li>
-                <li><strong>Mike Maignan</strong> (AC Milan / França) – Um dos goleiros mais ágeis da atualidade.</li>
-                <li><strong>Dibu Martínez</strong> (Aston Villa / Argentina) – Decisivo em grandes momentos.</li>
-                <li><strong>Diogo Costa</strong> (FC Porto / Portugal) – Excelente leitura de jogo e passe preciso.</li>
-                <li><strong>Ederson</strong> (Manchester City / Brasil) – Referência na construção de jogadas.</li>
-                <li><strong>Jan Oblak</strong> (Atlético de Madrid / Eslovênia) – Grande regularidade e posicionamento.</li>
-                <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha) – Seguro e importante para sua equipe.</li>
+                <li><strong>Thibaut Courtois</strong> (Real Madrid / Bélgica)</li>
+                <li><strong>Gianluigi Donnarumma</strong> (PSG / Itália)</li>
+                <li><strong>Alisson Becker</strong> (Liverpool / Brasil)</li>
+                <li><strong>David Raya</strong> (Arsenal / Espanha)</li>
+                <li><strong>Mike Maignan</strong> (AC Milan / França)</li>
+                <li><strong>Dibu Martínez</strong> (Aston Villa / Argentina)</li>
+                <li><strong>Diogo Costa</strong> (FC Porto / Portugal)</li>
+                <li><strong>Ederson</strong> (Manchester City / Brasil)</li>
+                <li><strong>Jan Oblak</strong> (Atlético de Madrid / Eslovênia)</li>
+                <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha)</li>
             </ol>
             <div class="reacoes">
                 <button class="like">👍 Curtir</button>
@@ -250,12 +240,7 @@
         <article>
             <h2>👑 Jogadores de Linha</h2>
             <p>
-                No futebol, os jogadores de linha dividem-se entre defensores,
-                meio-campistas e atacantes. Cada posição possui sua importância
-                para o funcionamento de uma equipe.
-            </p>
-            <p>
-                Este é o meu ranking pessoal dos maiores jogadores da história:
+                Este é o meu ranking pessoal dos maiores jogadores da história do futebol:
             </p>
             <ol>
                 <li><strong>Pelé</strong> - Brasil</li>
@@ -266,17 +251,7 @@
                 <li>Zinedine Zidane - França</li>
                 <li>Ronaldo Nazário - Brasil</li>
                 <li>Franz Beckenbauer - Alemanha</li>
-                <li>Alfredo Di Stéfano - Argentina/Espanha</li>
-                <li>Michel Platini - França</li>
-                <li>Garrincha - Brasil</li>
                 <li>Ronaldinho Gaúcho - Brasil</li>
-                <li>Ferenc Puskás - Hungria</li>
-                <li>Eusébio - Portugal</li>
-                <li>Marco van Basten - Holanda</li>
-                <li>Gerd Müller - Alemanha</li>
-                <li>Romário - Brasil</li>
-                <li>Andrés Iniesta - Espanha</li>
-                <li>Luka Modrić - Croácia</li>
                 <li>Neymar Jr. - Brasil</li>
             </ol>
             <div class="reacoes">
@@ -290,13 +265,10 @@
             <h2>🔥 Neymar é subestimado?</h2>
             <p>
                 Na minha opinião, Neymar é um dos jogadores brasileiros mais
-                talentosos da sua geração. Sua criatividade, habilidade e
-                capacidade de decidir partidas fazem dele um jogador especial.
+                talentosos da sua geração. Sua criatividade e habilidade fazem dele um jogador especial.
             </p>
             <p>
-                Muitas pessoas avaliam sua carreira apenas pelos títulos, mas
-                acredito que seu talento e sua importância para o futebol
-                brasileiro merecem ser reconhecidos.
+                Muitas pessoas avaliam sua carreira apenas pelos títulos, mas seu talento merece ser reconhecido.
             </p>
             <div class="reacoes">
                 <button class="like">👍 Curtir</button>
@@ -309,14 +281,9 @@
             <h2>🐐 Pelé, Messi ou Cristiano?</h2>
             <p>
                 Essa é uma das maiores discussões do futebol. Pelé marcou a
-                história e ajudou a transformar o esporte em algo ainda maior.
-                Messi impressiona pelo talento e pela forma como cria jogadas.
+                história, Messi impressiona pelo talento de criar jogadas e Cristiano pela dedicação.
             </p>
-            <p>
-                Cristiano Ronaldo, por outro lado, é um grande exemplo de
-                dedicação, evolução e capacidade de marcar gols. Para mim,
-                comparar jogadores de épocas diferentes sempre será difícil.
-            </p>
+
             <div class="reacoes">
                 <button class="like">👍 Curtir</button>
                 <button class="dislike">👎 Discordar</button>
@@ -325,17 +292,15 @@
         </article>
 
         <article>
-            <h2>🇧🇷 A Seleção Brasileira pode voltar ao topo?</h2>
+            <h2>🇧🇷 Seleção Brasileira</h2>
             <p>
                 O Brasil continua sendo um dos países que mais revela jogadores
-                talentosos. Existem grandes atletas brasileiros atuando nos
-                principais campeonatos do mundo.
+                talentosos no futebol mundial.
             </p>
             <p>
-                Na minha opinião, o principal desafio é transformar esse talento
-                individual em uma equipe organizada e preparada para competir
-                contra as melhores seleções.
+                O desafio atual é transformar esse talento individual em uma equipe organizada para competir no topo.
             </p>
+
             <div class="reacoes">
                 <button class="like">👍 Curtir</button>
                 <button class="dislike">👎 Discordar</button>
@@ -344,56 +309,11 @@
         </article>
 
         <article>
-            <h2>⚽ Futebol antigo ou futebol moderno?</h2>
+            <h2>⚽ Antigo x Moderno</h2>
             <p>
-                O futebol moderno é mais rápido, físico e organizado
-                taticamente. Atualmente, os jogadores precisam cumprir várias
-                funções durante uma mesma partida.
+                O futebol moderno é mais rápido, físico e organizado. Por outro lado, o futebol antigo esbanjava criatividade pura.
             </p>
-            <p>
-                Porém, o futebol de antigamente também possuía jogadores
-                extremamente criativos e marcantes. Para mim, cada época teve
-                suas próprias características e seus grandes craques.
-            </p>
-            <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
-            </div>
-        </article>
 
-        <article>
-            <h2>🏆 Copa do Mundo ou Champions League?</h2>
-            <p>
-                A Copa do Mundo possui uma pressão enorme porque representa uma
-                nação inteira. Para muitos jogadores, conquistar esse título é
-                o maior sonho possível no futebol.
-            </p>
-            <p>
-                Já a Champions League exige regularidade durante toda a
-                competição contra alguns dos melhores clubes do mundo. Na minha
-                opinião, as duas competições são especiais e possuem desafios
-                diferentes.
-            </p>
-            <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
-            </div>
-        </article>
-
-        <article>
-            <h2>⭐ Minha opinião sobre o futebol</h2>
-            <p>
-                O futebol é interessante porque não existe uma única maneira
-                correta de enxergar o jogo. Cada torcedor possui seus jogadores
-                favoritos, seus clubes e suas próprias opiniões.
-            </p>
-            <p>
-                Por isso, este site foi criado para compartilhar rankings e
-                opiniões e também para que outras pessoas possam concordar ou
-                discordar de cada publicação.
-            </p>
             <div class="reacoes">
                 <button class="like">👍 Curtir</button>
                 <button class="dislike">👎 Discordar</button>
@@ -443,7 +363,7 @@
                     numeroLike.textContent--;
                     numeroDislike.textContent++;
                     escolha = "dislike";
-                    like.classList.remove("ativo");
+                    dislike.classList.remove("ativo");
                     dislike.classList.add("ativo");
                 }
             });
