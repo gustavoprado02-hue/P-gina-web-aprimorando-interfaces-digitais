@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Fut</title>
+    <title>World Fut - Rankings e Opiniões sobre Futebol</title>
 
     <style>
         * {
@@ -40,14 +40,11 @@
             margin-bottom: 8px;
         }
 
-        /* CONFIGURAÇÃO DO MAIN IGUAL AO VÍDEO */
         main {
             width: 100%;
             max-width: 1100px;
             margin: 0 auto;
             padding: 16px;
-
-            /* Flexbox responsável por colocar os cards lado a lado */
             display: flex;
             flex-wrap: wrap;
             gap: 16px;
@@ -77,21 +74,17 @@
             gap: 12px;
         }
 
-        /* ESTILO DOS CARDS (ARTICLE) IGUAL À AULA */
         article {
             background-color: white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 16px;
-
             border: 1px solid #183C63;
             border-radius: 8px;
             padding: 16px;
-
-            /* Faz o card ocupar cerca de 1/3 da linha com flexbox */
             flex: 1 1 calc(33.333% - 16px);
-            min-width: 280px; /* Garante um tamanho mínimo antes de quebrar a linha */
+            min-width: 280px;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
         }
 
@@ -113,13 +106,12 @@
             font-size: 14px;
         }
 
-        /* ÁREA DE BOTÕES NO FINAL DE CADA CARD */
         .reacoes {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 8px;
-            margin-top: auto; /* Empurra os botões para a base do card */
+            margin-top: auto;
             padding-top: 10px;
             border-top: 1px solid #eee;
         }
@@ -166,16 +158,15 @@
             border-top: 5px solid #eacc07;
         }
 
-        /* RESPONSIVIDADE (Telas menores) */
         @media (max-width: 900px) {
             article {
-                flex: 1 1 calc(50% - 16px); /* 2 cards por linha no tablet */
+                flex: 1 1 calc(50% - 16px);
             }
         }
 
         @media (max-width: 600px) {
             article {
-                flex: 1 1 100%; /* 1 card por linha no celular */
+                flex: 1 1 100%;
             }
 
             .inicio {
@@ -188,15 +179,15 @@
 
 <body>
 
-    <header>
+    <header role="banner">
         <h1>⚽ World Fut</h1>
         <p>Rankings, opiniões e grandes nomes da história do futebol.</p>
     </header>
 
-    <main>
+    <main role="main">
 
-        <section class="inicio">
-            <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Bola de futebol">
+        <section class="inicio" id="introducao">
+            <img class="icone" src="Gemini_Generated_Image_fcxe2ofcxe2ofcxe.png" alt="Ilustração de uma bola de futebol oficial" width="120" height="80">
             <div class="conteudo">
                 <h2>Meu Ranking Pessoal</h2>
                 <p>
@@ -204,14 +195,14 @@
                     alguns dos maiores jogadores e atletas do futebol.
                 </p>
                 <div class="reacoes">
-                    <button class="like">👍 Curtir</button>
-                    <button class="dislike">👎 Discordar</button>
-                    <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                    <button type="button" class="like" aria-label="Curtir introdução">👍 Curtir</button>
+                    <button type="button" class="dislike" aria-label="Discordar da introdução">👎 Discordar</button>
+                    <button type="button" class="contador" aria-label="Contador de votos">👍 <span>0</span> | 👎 <span>0</span></button>
                 </div>
             </div>
         </section>
 
-        <article>
+        <article id="post-goleiros">
             <h2>🧤 Goleiros</h2>
             <p>
                 A posição de goleiro é uma das mais importantes do futebol.
@@ -231,13 +222,13 @@
                 <li><strong>Unai Simón</strong> (Athletic Bilbao / Espanha)</li>
             </ol>
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir post de goleiros">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar do post de goleiros">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos dos goleiros">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
-        <article>
+        <article id="post-jogadores-linha">
             <h2>👑 Jogadores de Linha</h2>
             <p>
                 Este é o meu ranking pessoal dos maiores jogadores da história do futebol:
@@ -255,13 +246,13 @@
                 <li>Neymar Jr. - Brasil</li>
             </ol>
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir post de jogadores de linha">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar do post de jogadores de linha">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos de jogadores de linha">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
-        <article>
+        <article id="post-neymar">
             <h2>🔥 Neymar é subestimado?</h2>
             <p>
                 Na minha opinião, Neymar é um dos jogadores brasileiros mais
@@ -271,27 +262,26 @@
                 Muitas pessoas avaliam sua carreira apenas pelos títulos, mas seu talento merece ser reconhecido.
             </p>
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir opinião sobre Neymar">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar da opinião sobre Neymar">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos sobre Neymar">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
-        <article>
+        <article id="post-debate-goat">
             <h2>🐐 Pelé, Messi ou Cristiano?</h2>
             <p>
                 Essa é uma das maiores discussões do futebol. Pelé marcou a
                 história, Messi impressiona pelo talento de criar jogadas e Cristiano pela dedicação.
             </p>
-
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir debate dos maiores jogadores">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar do debate dos maiores jogadores">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos do debate dos maiores">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
-        <article>
+        <article id="post-selecao-brasileira">
             <h2>🇧🇷 Seleção Brasileira</h2>
             <p>
                 O Brasil continua sendo um dos países que mais revela jogadores
@@ -300,30 +290,28 @@
             <p>
                 O desafio atual é transformar esse talento individual em uma equipe organizada para competir no topo.
             </p>
-
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir análise da Seleção Brasileira">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar da análise da Seleção Brasileira">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos da Seleção Brasileira">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
-        <article>
+        <article id="post-futebol-antigo-moderno">
             <h2>⚽ Antigo x Moderno</h2>
             <p>
                 O futebol moderno é mais rápido, físico e organizado. Por outro lado, o futebol antigo esbanjava criatividade pura.
             </p>
-
             <div class="reacoes">
-                <button class="like">👍 Curtir</button>
-                <button class="dislike">👎 Discordar</button>
-                <button class="contador">👍 <span>0</span> | 👎 <span>0</span></button>
+                <button type="button" class="like" aria-label="Curtir comparação futebol antigo e moderno">👍 Curtir</button>
+                <button type="button" class="dislike" aria-label="Discordar da comparação futebol antigo e moderno">👎 Discordar</button>
+                <button type="button" class="contador" aria-label="Contador de votos futebol antigo e moderno">👍 <span>0</span> | 👎 <span>0</span></button>
             </div>
         </article>
 
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <p>⚽ World Fut - Rankings e opiniões sobre futebol.</p>
     </footer>
 
